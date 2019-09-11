@@ -1,0 +1,23 @@
+﻿@model StudentGroup.Models.Group
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Новая группа</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(model => model.Name, "Имя")
+    <br />
+    @Html.EditorFor(model => model.Name)
+    <br />
+
+    <br />
+    @Html.LabelFor(model => model.CourseId, "Курсы")
+    <p>
+        @Html.DropDownListFor(model => model.CourseId, ViewBag.Courses as SelectList)
+    </p>
+    <br />
+    <input type="submit" value="Добавить" />
+}
