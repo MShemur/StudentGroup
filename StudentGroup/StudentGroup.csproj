@@ -126,7 +126,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\StudentController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -178,17 +178,16 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Home\CreateGroup.cshtml" />
-    <Content Include="Views\Home\CreateStudent.cshtml" />
-    <Content Include="Views\Home\DeleteGroup.cshtml" />
-    <Content Include="Views\Home\DeleteStudent.cshtml" />
-    <Content Include="Views\Home\EditGroup.cshtml" />
-    <Content Include="Views\Home\EditStudent.cshtml" />
-    <Content Include="Views\Home\GroupDetails.cshtml" />
-    <Content Include="Views\Home\Groups.cshtml" />
-    <Content Include="Views\Home\GroupsList.cshtml" />
-    <Content Include="Views\Home\StudentList.cshtml" />
+    <Content Include="Views\Student\Index.cshtml" />
+    <Content Include="Views\Student\CreateGroup.cshtml" />
+    <Content Include="Views\Student\CreateStudent.cshtml" />
+    <Content Include="Views\Student\DeleteGroup.cshtml" />
+    <Content Include="Views\Student\DeleteStudent.cshtml" />
+    <Content Include="Views\Student\EditGroup.cshtml" />
+    <Content Include="Views\Student\EditStudent.cshtml" />
+    <Content Include="Views\Student\GroupDetails.cshtml" />
+    <Content Include="Views\Student\GroupsList.cshtml" />
+    <Content Include="Views\Student\StudentList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
