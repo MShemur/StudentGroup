@@ -1,0 +1,43 @@
+﻿@model StudentGroup.Models.Group
+
+@{
+    ViewBag.Title = "Delete Group";
+}
+
+<h2>Удалить группу</h2>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<dl>
+    <dt>ID</dt>
+    <dd>
+        @Html.DisplayFor(model => model.Id)
+    </dd>
+
+    <dt>Название группы</dt>
+    <dd>
+        @Html.DisplayFor(model => model.Name)
+    </dd>
+
+    <dt>Курс</dt>
+    <dd>
+        @Html.DisplayFor(model => model.Course.Name)
+    </dd>
+</dl>
+
+@using (Html.BeginForm())
+{
+    if (!Model.Students.Any())
+    {
+        <input type="submit" value="Удалить" />
+    }
+    else
+    {
+        <dt>
+            <font color=Red>
+                Невозможно удалить группу. В ней есть студенты
+            </font>
+        </dt>
+    }
+}

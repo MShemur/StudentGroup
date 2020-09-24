@@ -1,0 +1,31 @@
+﻿@model StudentGroup.Models.Student
+
+@{
+    ViewBag.Title = "Edit Student";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Студент @Model.FirstName @Model.LastName</h2>
+
+@using (Html.BeginForm("EditStudent", "Home", FormMethod.Post))
+{
+
+    @Html.HiddenFor(m => m.Id)
+    <p>
+        @Html.LabelFor(m => m.FirstName, "Имя")
+        <br />
+        @Html.EditorFor(m => m.FirstName)
+    </p>
+    <p>
+        @Html.LabelFor(m => m.LastName, "Фамилия")
+        <br />
+        @Html.EditorFor(m => m.LastName)
+
+    </p>
+    <p>
+        Группа <br />
+        @Html.DropDownListFor(model => model.GroupId, ViewBag.Groups as SelectList)
+    </p>
+    <p><input type="submit" value="Отправить" /></p>
+
+}

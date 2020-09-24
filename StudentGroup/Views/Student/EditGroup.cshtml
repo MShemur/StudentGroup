@@ -1,0 +1,23 @@
+﻿@model StudentGroup.Models.Group
+
+@{
+    ViewBag.Title = "Edit Group";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Группа № @Model.Name</h2>
+
+@using (Html.BeginForm("EditGroup", "Home", FormMethod.Post))
+{
+    <fieldset>
+        @Html.HiddenFor(m => m.Id)
+        @Html.HiddenFor(m => m.CourseId)
+
+        <p>
+            @Html.LabelFor(m => m.Name, "Имя группы")
+            <br />
+            @Html.EditorFor(m => m.Name)
+        </p>
+        <p><input type="submit" value="Отправить" /></p>
+    </fieldset>
+}

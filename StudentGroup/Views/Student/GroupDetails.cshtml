@@ -1,0 +1,23 @@
+﻿@using StudentGroup.Models
+@model Group
+
+@{
+    ViewBag.Title = "Группа " + Model.Name;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div>
+    <h4>Группа @Model.Name</h4>
+    <hr />
+    <dl>
+        <dt> Название</dt>
+        <dd> @Html.DisplayFor(Model => Model.Name)</dd>
+    </dl>
+
+    <dt>ID</dt>
+
+    <dd> @Html.DisplayFor(Model => Model.CourseId)</dd>
+
+    <dt>Студенты</dt>
+
+
+</div>
